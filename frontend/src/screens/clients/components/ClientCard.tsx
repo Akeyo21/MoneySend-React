@@ -1,17 +1,24 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {styles} from '../Clients.style';
-const ClientCard = () => {
+import {clientType} from '../Clients.type';
+
+const ClientCard = ({
+  name,
+  phoneNumber,
+  totalAmountBorrowed,
+  totalInterestDue,
+}: clientType) => {
   return (
     <View style={styles.card}>
       <View>
-        <Text style={styles.text}>Michelle Amy</Text>
-        <Text style={styles.text}>0721345678</Text>
+        <Text style={styles.text}>{name}</Text>
+        <Text style={styles.text}>{phoneNumber}</Text>
       </View>
 
       <View>
-        <Text style={styles.text}>10,000</Text>
-        <Text style={styles.text}>1,000</Text>
+        <Text style={styles.text}>{totalAmountBorrowed}</Text>
+        <Text style={styles.text}>{totalInterestDue}</Text>
       </View>
     </View>
   );
