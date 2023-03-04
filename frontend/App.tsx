@@ -7,7 +7,7 @@
 
 import React from 'react';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
-import Clients from './src/screens/clients';
+import Clients from './src/screens/Clients';
 
 function App(): JSX.Element {
   const client = new ApolloClient({
