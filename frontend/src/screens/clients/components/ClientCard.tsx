@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleProp, Text, TextStyle, View} from 'react-native';
+import {formatMoneyText} from '../../../utils/moneyFormatter';
 import {clientType} from '../Clients.type';
 
 const text: StyleProp<TextStyle> = {
@@ -33,8 +34,10 @@ const ClientCard = ({
       </View>
 
       <View>
-        <Text style={amountTextStyle}>{totalAmountBorrowed}</Text>
-        <Text style={amountTextStyle}>{totalInterestDue}</Text>
+        <Text style={amountTextStyle}>
+          {formatMoneyText(totalAmountBorrowed)}
+        </Text>
+        <Text style={amountTextStyle}>{formatMoneyText(totalInterestDue)}</Text>
       </View>
     </View>
   );
