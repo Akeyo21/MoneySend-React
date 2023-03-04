@@ -1,11 +1,11 @@
 import {useQuery} from '@apollo/client';
 import React from 'react';
-import {FlatList, Text, View} from 'react-native';
-import {styles} from './Clients.style';
+import {FlatList, View} from 'react-native';
 
 import {GET_CLIENTS} from '../../../App.query';
 import ClientCard from './components/ClientCard';
-import {clientType} from './Clients.type';
+import {testData} from './Clients.test-data';
+import Header from './components/Header';
 
 function Clients() {
   // const {loading, error, data} = useQuery(GET_CLIENTS);
@@ -18,66 +18,16 @@ function Clients() {
   // }
 
   // console.log('CLIENTS', data.clients);
-  const testData: clientType[] = [
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-    {
-      name: 'Michelle Amy',
-      phoneNumber: '0721345678',
-      totalAmountBorrowed: 10000,
-      totalInterestDue: 1000,
-    },
-  ];
+
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        backgroundColor: 'white',
+        height: '100%',
+      }}>
       <FlatList
         data={testData}
+        ListHeaderComponent={<Header headerText="Clients" />}
         renderItem={({item}) => <ClientCard {...item} />}
       />
     </View>
