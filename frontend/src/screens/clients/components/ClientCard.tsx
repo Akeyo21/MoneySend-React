@@ -1,7 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import {styles} from '../Clients.style';
 import {clientType} from '../Clients.type';
+
+const text = {
+  color: 'black',
+};
 
 const ClientCard = ({
   name,
@@ -10,15 +13,24 @@ const ClientCard = ({
   totalInterestDue,
 }: clientType) => {
   return (
-    <View style={styles.card}>
+    <View
+      style={{
+        padding: '5%',
+        margin: '5%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        borderRadius: 10,
+        elevation: 9,
+        backgroundColor: 'white',
+      }}>
       <View>
-        <Text style={styles.text}>{name}</Text>
-        <Text style={styles.text}>{phoneNumber}</Text>
+        <Text style={text}>{name}</Text>
+        <Text style={text}>{phoneNumber}</Text>
       </View>
 
       <View>
-        <Text style={styles.text}>{totalAmountBorrowed}</Text>
-        <Text style={styles.text}>{totalInterestDue}</Text>
+        <Text style={text}>{totalAmountBorrowed}</Text>
+        <Text style={text}>{totalInterestDue}</Text>
       </View>
     </View>
   );
