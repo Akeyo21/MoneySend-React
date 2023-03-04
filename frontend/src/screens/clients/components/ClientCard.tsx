@@ -1,10 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StyleProp, Text, TextStyle, View} from 'react-native';
 import {clientType} from '../Clients.type';
 
-const text = {
+const text: StyleProp<TextStyle> = {
   color: 'black',
 };
+
+const amountTextStyle: StyleProp<TextStyle> = {...text, fontWeight: '200'};
 
 const ClientCard = ({
   name,
@@ -22,15 +24,17 @@ const ClientCard = ({
         borderRadius: 10,
         elevation: 9,
         backgroundColor: 'white',
+        shadowColor: 'green',
+        shadowOpacity: 0.1,
       }}>
       <View>
-        <Text style={text}>{name}</Text>
-        <Text style={text}>{phoneNumber}</Text>
+        <Text style={{...text, fontWeight: '500'}}>{name}</Text>
+        <Text style={{...text, fontWeight: '300'}}>{phoneNumber}</Text>
       </View>
 
       <View>
-        <Text style={text}>{totalAmountBorrowed}</Text>
-        <Text style={text}>{totalInterestDue}</Text>
+        <Text style={amountTextStyle}>{totalAmountBorrowed}</Text>
+        <Text style={amountTextStyle}>{totalInterestDue}</Text>
       </View>
     </View>
   );
