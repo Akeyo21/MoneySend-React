@@ -12,8 +12,8 @@ const amountTextStyle: StyleProp<TextStyle> = {...text, fontWeight: '200'};
 const ClientCard = ({
   name,
   phoneNumber,
-  totalAmountBorrowed,
-  totalInterestDue,
+  outstandingBalance,
+  interest,
 }: clientType) => {
   return (
     <View
@@ -35,9 +35,9 @@ const ClientCard = ({
 
       <View>
         <Text style={amountTextStyle}>
-          {formatMoneyText(totalAmountBorrowed)}
+          {formatMoneyText(outstandingBalance)}
         </Text>
-        <Text style={amountTextStyle}>{formatMoneyText(totalInterestDue)}</Text>
+        <Text style={amountTextStyle}>{formatMoneyText(interest)}</Text>
       </View>
     </View>
   );
