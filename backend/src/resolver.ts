@@ -3,7 +3,8 @@ import { Client } from "./schemas/client";
 export const resolvers = {
   Query: {
     clients: async () => {
-      return await Client.find();
+      const clients = await Client.find({});
+      return clients;
     },
   },
 };
