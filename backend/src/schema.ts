@@ -5,8 +5,8 @@ export const gqlSchema = `
   # This "Book" type defines the queryable fields for every book in our data source.
   type Client {
     name: String
-    phoneNumber: [String]
-    amountBorrowed: Int
+    phoneNumber: String
+    outstandingBalance: Int
     interest: Int
   }
 
