@@ -4,10 +4,12 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 
 import { gqlSchema } from "./schema";
 import { resolvers } from "./resolver";
+
 const connectToDb = async () => {
   const DATABASE_URL = "mongodb://localhost:27017/money_send_dev";
   await mongoose.connect(DATABASE_URL);
 };
+
 const startBackend = async () => {
   await connectToDb();
   // The ApolloServer constructor requires two parameters: your schema
