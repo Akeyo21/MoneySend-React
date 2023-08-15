@@ -1,10 +1,28 @@
+import {useQuery} from '@apollo/client';
 import React from 'react';
 import {FlatList, Text, TouchableOpacity, View} from 'react-native';
-import {testData} from './Clients.test-data';
+import {GET_CLIENTS} from './Clients.query';
 import ClientCard from './components/ClientCard';
 import Header from './components/Header';
 
 function Clients() {
+  const {loading, error, data} = useQuery(GET_CLIENTS);
+
+  if (loading) {
+    return (
+      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <Text>'Loading...'</Text>
+      </View>
+    );
+  }
+  if (error) {
+    console.log('ERROR', error);
+    return (
+      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <Text>`Error!, error`</Text>
+      </View>
+    );
+  }
   return (
     <View
       style={{
@@ -13,7 +31,7 @@ function Clients() {
       }}>
       <Header headerText="Clients" />
       <FlatList
-        data={testData}
+        data={data?.clients}
         renderItem={({item}) => <ClientCard {...item} />}
       />
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
