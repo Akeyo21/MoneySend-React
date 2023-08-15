@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Michael Stevens",
+    "interest": 10000,
+    "phoneNumber": "0712345678",
+    "outstadingBalance": 100000
+  },
+  {
+  "name": "Jane Wariuri",
+  "phoneNumber": "0721345678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Alex Otieno",
+  "phoneNumber": "0721445678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Jannette Okeny",
+  "phoneNumber": "0721555678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Michelle Amy",
+  "phoneNumber": "0721335678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Kwame Juma",
+  "phoneNumber": "07213335678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Amina Mwangi",
+  "phoneNumber": "0721145678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Baraka Wanjiku",
+  "phoneNumber": "0722245678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Njeri Omondi",
+  "phoneNumber": "0721745678",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Jamal Ndung'u",
+  "phoneNumber": "0721745688",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Akinyi Muthoni",
+  "phoneNumber": "0721775688",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Ochieng Kariuki",
+  "phoneNumber": "0729995688",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Nyambura Kamau",
+  "phoneNumber": "0729965688",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Muthoni Gichuru",
+  "phoneNumber": "0729865688",
+  "outstandingBalance": 10000,
+  "interest": 1000
+},
+{
+  "name": "Simba Kimani",
+  "phoneNumber": "0719865688",
+  "outstandingBalance": 10000,
+  "interest": 1000
+}
+]
+
