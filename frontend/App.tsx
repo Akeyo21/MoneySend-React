@@ -7,11 +7,11 @@
 
 import React from 'react';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
-import Clients from './src/screens/Clients';
+import Clients from './src/screens/clients/Clients';
 
 function App(): JSX.Element {
   const client = new ApolloClient({
-    uri: 'http://192.168.0.11:4000/graphql',
+    uri: 'http://localhost:4000/graphql',
     cache: new InMemoryCache(),
   });
 
