@@ -20,7 +20,8 @@ const ClientCard = ({
   return (
     <View
       style={{
-        padding: '5%',
+        paddingLeft: '5%',
+        paddingVertical: '5%',
         margin: '5%',
         flexDirection: 'row',
         borderRadius: 10,
@@ -72,6 +73,15 @@ const ClientCard = ({
             <Text style={amountTextStyle}>{formatMoneyText(interest)}</Text>
           </View>
         </View>
+      </View>
+
+      <View>
+        <Icon
+          name="chevron-right"
+          color={primary}
+          size={40}
+          style={{fontWeight: '900'}}
+        />
       </View>
     </View>
   );
