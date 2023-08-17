@@ -3,6 +3,7 @@ import {StyleProp, Text, TextStyle, View} from 'react-native';
 import {formatMoneyText} from '../../../utils/moneyFormatter';
 import {clientType} from '../Clients.type';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {primary} from '../../../color.constants';
 
 const text: StyleProp<TextStyle> = {
   color: 'black',
@@ -28,11 +29,11 @@ const ClientCard = ({
         shadowColor: '#026600',
         shadowOpacity: 0.2,
         shadowOffset: {
-          width: 2,
+          width: -1,
           height: 5,
         },
       }}>
-      <Icon name="account-circle" size={40} color="#026600" />
+      <Icon name="account-circle" size={40} color={primary} />
       <View
         style={{
           flexDirection: 'row',
@@ -42,14 +43,34 @@ const ClientCard = ({
         }}>
         <View>
           <Text style={{...text, fontWeight: '500'}}>{name}</Text>
-          <Text style={{...text, fontWeight: '300'}}>{phoneNumber}</Text>
+          <Text style={{...text, fontWeight: '300', marginTop: 5}}>
+            {phoneNumber}
+          </Text>
         </View>
 
         <View>
-          <Text style={amountTextStyle}>
-            {formatMoneyText(outstandingBalance)}
-          </Text>
-          <Text style={amountTextStyle}>{formatMoneyText(interest)}</Text>
+          <View style={{flexDirection: 'row'}}>
+            <Icon
+              name="payments"
+              color={primary}
+              size={15}
+              style={{marginRight: 5}}
+            />
+
+            <Text style={amountTextStyle}>
+              {formatMoneyText(outstandingBalance)}
+            </Text>
+          </View>
+
+          <View style={{flexDirection: 'row', marginTop: 5}}>
+            <Icon
+              name="percent"
+              color={primary}
+              size={15}
+              style={{marginRight: 5}}
+            />
+            <Text style={amountTextStyle}>{formatMoneyText(interest)}</Text>
+          </View>
         </View>
       </View>
     </View>
