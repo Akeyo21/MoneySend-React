@@ -3,7 +3,6 @@ import React from 'react';
 import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import {GET_CLIENTS} from './Clients.query';
 import ClientCard from './components/ClientCard';
-import Header from './components/Header';
 
 function Clients() {
   const {loading, error, data} = useQuery(GET_CLIENTS);
@@ -29,7 +28,6 @@ function Clients() {
         backgroundColor: 'white',
         height: '100%',
       }}>
-      <Header headerText="Clients" />
       <FlatList
         data={data?.clients}
         renderItem={({item}) => <ClientCard {...item} />}
