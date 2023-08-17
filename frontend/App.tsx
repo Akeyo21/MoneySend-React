@@ -12,6 +12,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {TouchableOpacity} from 'react-native';
+import {primary} from './src/color.constants';
 
 function App(): JSX.Element {
   const client = new ApolloClient({
@@ -26,7 +27,7 @@ function App(): JSX.Element {
       <ApolloProvider client={client}>
         <Tab.Navigator
           screenOptions={{
-            tabBarActiveTintColor: '#026600',
+            tabBarActiveTintColor: primary,
             tabBarInactiveTintColor: '#4C574C',
             tabBarButton: props => <TouchableOpacity {...props} />,
             headerTitleStyle: {
