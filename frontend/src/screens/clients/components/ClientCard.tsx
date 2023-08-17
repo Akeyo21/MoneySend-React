@@ -25,8 +25,12 @@ const ClientCard = ({
         borderRadius: 10,
         elevation: 9,
         backgroundColor: 'white',
-        shadowColor: 'green',
-        shadowOpacity: 0.5,
+        shadowColor: '#026600',
+        shadowOpacity: 0.2,
+        shadowOffset: {
+          width: 2,
+          height: 5,
+        },
       }}>
       <Icon name="account-circle" size={40} color="#026600" />
       <View
