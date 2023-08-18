@@ -1,10 +1,13 @@
 import {useQuery} from '@apollo/client';
 import React from 'react';
-import {FlatList, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, Text, View} from 'react-native';
+
+import AddButton from '../../components/AddButton';
 import {GET_CLIENTS} from './Clients.query';
+import {AddClientScreen} from './Clients.screens';
 import ClientCard from './components/ClientCard';
 
-function Clients() {
+function Clients({navigation}: any) {
   const {loading, error, data} = useQuery(GET_CLIENTS);
 
   if (loading) {
@@ -32,21 +35,12 @@ function Clients() {
         data={data?.clients}
         renderItem={({item}) => <ClientCard {...item} />}
       />
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
-        <TouchableOpacity
-          style={{
-            width: '50%',
-            backgroundColor: 'green',
-            position: 'absolute',
-            bottom: 20,
-            borderRadius: 50,
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 50,
-          }}>
-          <Text style={{color: 'white', fontSize: 20}}>Add Client</Text>
-        </TouchableOpacity>
-      </View>
+      <AddButton
+        buttonText="Add Client"
+        onPress={() => {
+          navigation.navigate(AddClientScreen);
+        }}
+      />
     </View>
   );
 }
