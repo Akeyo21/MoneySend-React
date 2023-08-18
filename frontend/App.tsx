@@ -1,18 +1,12 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
-import Clients from './src/screens/clients/Clients';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {TouchableOpacity} from 'react-native';
 import {primary} from './src/color.constants';
+import ClientsStackScreen from './src/screens/clients/Clients.screens';
+import ClientRecordsStackScreen from './src/screens/client-records/ClientRecords.screens';
 
 function App(): JSX.Element {
   const client = new ApolloClient({
@@ -29,6 +23,7 @@ function App(): JSX.Element {
           screenOptions={{
             tabBarActiveTintColor: primary,
             tabBarInactiveTintColor: '#4C574C',
+            headerShown: false,
             tabBarButton: props => <TouchableOpacity {...props} />,
             headerTitleStyle: {
               fontSize: 30,
@@ -37,14 +32,14 @@ function App(): JSX.Element {
           }}>
           <Tab.Screen
             name="Clients"
-            component={Clients}
+            component={ClientsStackScreen}
             options={{
               tabBarIcon: props => <Icon name="groups" {...props} />,
             }}
           />
           <Tab.Screen
             name="Client Records"
-            component={Clients}
+            component={ClientRecordsStackScreen}
             options={{
               tabBarIcon: props => <Icon name="view-list" {...props} />,
             }}
