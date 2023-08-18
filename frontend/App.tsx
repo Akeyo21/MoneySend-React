@@ -25,10 +25,6 @@ function App(): JSX.Element {
             tabBarInactiveTintColor: '#4C574C',
             headerShown: false,
             tabBarButton: props => <TouchableOpacity {...props} />,
-            headerTitleStyle: {
-              fontSize: 30,
-              fontWeight: '600',
-            },
           }}>
           <Tab.Screen
             name="Clients"
