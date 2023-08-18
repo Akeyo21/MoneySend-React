@@ -12,7 +12,7 @@ const AddButton = ({buttonText, onPress}: props) => {
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
       <TouchableOpacity
         style={{
-          width: '50%',
+          width: '60%',
           backgroundColor: primary,
           position: 'absolute',
           bottom: 20,
