@@ -76,12 +76,7 @@ const ClientCard = ({
       </View>
 
       <View>
-        <Icon
-          name="chevron-right"
-          color={primary}
-          size={40}
-          style={{fontWeight: '900'}}
-        />
+        <Icon name="chevron-right" color={primary} size={40} />
       </View>
     </View>
   );
