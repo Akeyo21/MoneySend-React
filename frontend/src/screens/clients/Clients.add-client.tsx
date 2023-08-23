@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import DatePicker from 'react-native-date-picker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {primary} from '../../color.constants';
+import {formatDate} from '../../utils/dateFormatter';
 
 const AddClient = () => {
   const [date, setDate] = useState(new Date());
@@ -21,9 +22,7 @@ const AddClient = () => {
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
-          <Text style={{fontSize: 16}}>
-            {date.getDay()}/ {date.getMonth()}/{date.getFullYear()}
-          </Text>
+          <Text style={{fontSize: 16}}>{formatDate(date)}</Text>
           <Icon
             name="calendar-today"
             color={primary}
