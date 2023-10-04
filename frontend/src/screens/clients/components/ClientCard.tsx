@@ -22,16 +22,15 @@ const ClientCard = ({
       style={{
         paddingLeft: '5%',
         paddingVertical: '5%',
-        margin: '5%',
+        margin: '3%',
         flexDirection: 'row',
         borderRadius: 10,
         elevation: 9,
         backgroundColor: 'white',
-        shadowColor: '#026600',
         shadowOpacity: 0.2,
         shadowOffset: {
-          width: -1,
-          height: 5,
+          width: 5,
+          height: -1,
         },
       }}>
       <Icon name="account-circle" size={40} color={primary} />
