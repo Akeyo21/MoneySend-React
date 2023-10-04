@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import {TextInput, View, Text} from 'react-native';
 import {primary} from '../../color.constants';
 import CTAButton from '../../components/CTAButton';
