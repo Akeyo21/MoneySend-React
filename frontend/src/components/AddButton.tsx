@@ -1,33 +1,12 @@
 import React from 'react';
-import {View, TouchableOpacity, Text} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {primary} from '../color.constants';
+import CTAButton from './CTAButton';
 
 type props = {
   buttonText: string;
   onPress: () => void;
 };
 const AddButton = ({buttonText, onPress}: props) => {
-  return (
-    <View style={{justifyContent: 'center', alignItems: 'center'}}>
-      <TouchableOpacity
-        style={{
-          width: '60%',
-          backgroundColor: primary,
-          position: 'absolute',
-          bottom: 20,
-          borderRadius: 50,
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: 50,
-          flexDirection: 'row',
-        }}
-        onPress={onPress}>
-        <Icon name="add" size={25} style={{color: 'white', marginRight: 2}} />
-        <Text style={{color: 'white', fontSize: 20}}>{buttonText}</Text>
-      </TouchableOpacity>
-    </View>
-  );
+  return <CTAButton buttonText={buttonText} onPress={onPress} iconName="add" />;
 };
 
 export default AddButton;
